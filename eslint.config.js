@@ -5,6 +5,7 @@ import pluginVueA11y from 'eslint-plugin-vuejs-accessibility'
 import stylisticJs from '@stylistic/eslint-plugin-js'
 import stylisticTs from '@stylistic/eslint-plugin-ts'
 import tsEslint from 'typescript-eslint'
+import vueEslintParser from 'vue-eslint-parser'
 
 export default [
   eslintJs.configs.recommended,
@@ -20,8 +21,13 @@ export default [
     files: ["**/*.js", "**/*.ts", "**/*.vue"],
     languageOptions: {
       globals: globals.browser,
+      parser: vueEslintParser,
       parserOptions: {
-        parser: tsEslint.parser
+        ecmaFeatures: { modules: true },
+        ecmaVersion: 'latest',
+        extraFileExtensions: ['.vue'],
+        parser: tsEslint.parser,
+        project: './tsconfig.json',
       }
     },
     plugins: {
