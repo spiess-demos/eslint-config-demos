@@ -11,7 +11,7 @@ As this package is not yet available on npm, install it directly from GitHub
 using the latest commit hash, along with its devDependencies.
 
 ```shell
-yarn add @demos-europe/eslint-config-demos@github:spiess-demos/eslint-config-demos#a42d7d964df1541a36b9695fcd82e00c8a2ea916 @eslint/js @stylistic/eslint-plugin-js @stylistic/eslint-plugin-ts eslint eslint-plugin-vue eslint-plugin-vuejs-accessibility globals typescript-eslint -D
+yarn add @demos-europe/eslint-config-demos@github:spiess-demos/eslint-config-demos#bcbffb76e80cca635086a52d38be94985b61c2d4 @eslint/js @stylistic/eslint-plugin-js @stylistic/eslint-plugin-ts eslint eslint-plugin-vue eslint-plugin-vuejs-accessibility globals typescript-eslint -D
 ```
 
 ## Usage
