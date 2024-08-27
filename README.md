@@ -15,7 +15,9 @@ yarn add eslint @demos-europe/eslint-config-demos @eslint/js @stylistic/eslint-p
 
 ## Usage
 
-Create an `eslint.config.js` file in your project root and extend the configuration:
+Create an `eslint.config.js` file in your project root and extend the configuration.
+
+### ESM
 
 ```javascript
 import baseConfig from '@demos-europe/eslint-config-demos'
@@ -32,6 +34,31 @@ export default [
 ]
 ```
 
+### CommonJS
+
+```javascript
+const baseConfig = require('@demos-europe/eslint-config-demos')
+
+module.exports = [
+  ...baseConfig,
+  {
+    rules: {
+      // Override or add specific rules
+      'no-console': 'warn',
+      'semi': ['error', 'always']
+    }
+  }
+]
+```
+
+### Run the linter
+
+You can then run the linter:
+
+- `yarn lint` just lints everything: errors and warnings
+- `yarn lint --fix` applies "no-brainer" fixes
+- `yarn lint --quiet` runs the error rules only, may be faster
+
 ## Features
 
 - Rules based on ESLint recommended configurations
@@ -39,9 +66,9 @@ export default [
 - Accessibility linting with `eslint-plugin-vuejs-accessibility`
 - Stylistic rules via `@stylistic/eslint-plugin-js` and `@stylistic/eslint-plugin-ts`
 
+If you are interested in the reasoning why this package uses Stylistic to enforce code style
+changes, [read this article by the maintainers of Stylistic](https://eslint.style/guide/why).
+
 ## License
 
 This project is licensed under the MIT License.
-
-## Uses Stylistic
-- https://eslint.style/guide/why
