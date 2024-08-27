@@ -67,8 +67,8 @@ You can then run the linter:
 - Accessibility linting with `eslint-plugin-vuejs-accessibility`
 - Stylistic rules via `@stylistic/eslint-plugin-js` and `@stylistic/eslint-plugin-ts`
 
-If you are interested in the reasoning why this package uses Stylistic to enforce code style
-changes, [read this article by the maintainers of Stylistic](https://eslint.style/guide/why).
+If you are interested in the reasoning why this package uses Stylistic to enforce code style consistency,
+[read this article by the maintainers of Stylistic](https://eslint.style/guide/why).
 
 ## License
 
