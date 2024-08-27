@@ -7,10 +7,11 @@ It supports JavaScript, TypeScript, and Vue.js, with rules for accessibility and
 
 ## Installation
 
-Install the package and its peer dependencies:
+As this package is not yet available on npm, install it directly from GitHub 
+using the latest commit hash, along with its devDependencies.
 
 ```shell
-yarn add eslint @demos-europe/eslint-config-demos @eslint/js @stylistic/eslint-plugin-js @stylistic/eslint-plugin-ts eslint-plugin-vue eslint-plugin-vuejs-accessibility globals typescript typescript-eslint -D
+yarn add @demos-europe/eslint-config-demos@github:spiess-demos/eslint-config-demos#f910ec4a74a39e4164109e0a03338ad3876e8721 @eslint/js @stylistic/eslint-plugin-js @stylistic/eslint-plugin-ts eslint eslint-plugin-vue eslint-plugin-vuejs-accessibility globals typescript-eslint -D
 ```
 
 ## Usage
