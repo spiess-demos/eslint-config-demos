@@ -11,7 +11,7 @@ As this package is not yet available on npm, install it directly from GitHub
 using the latest commit hash, along with its devDependencies.
 
 ```shell
-yarn add @demos-europe/eslint-config-demos@github:spiess-demos/eslint-config-demos#bcbffb76e80cca635086a52d38be94985b61c2d4 @eslint/js @stylistic/eslint-plugin-js @stylistic/eslint-plugin-ts eslint eslint-plugin-vue eslint-plugin-vuejs-accessibility globals typescript-eslint -D
+yarn add @demos-europe/eslint-config-demos@github:spiess-demos/eslint-config-demos#bcbffb76e80cca635086a52d38be94985b61c2d4 @eslint/js @stylistic/eslint-plugin-js @stylistic/eslint-plugin-ts eslint eslint-plugin-vue eslint-plugin-vuejs-accessibility globals typescript-eslint vue-eslint-parser -D
 ```
 
 ## Usage
@@ -66,6 +66,7 @@ You can then run the linter:
 - Support for JavaScript, TypeScript, and Vue.js
 - Accessibility linting with `eslint-plugin-vuejs-accessibility`
 - Stylistic rules via `@stylistic/eslint-plugin-js` and `@stylistic/eslint-plugin-ts`
+- A custom rule that enforces "data-cy" attribute on interactive elements
 
 If you are interested in the reasoning why this package uses Stylistic to enforce code style consistency,
 [read this article by the maintainers of Stylistic](https://eslint.style/guide/why).

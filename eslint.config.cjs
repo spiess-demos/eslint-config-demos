@@ -1,10 +1,12 @@
 const globals = require('globals');
 const eslintJs = require('@eslint/js');
+const pluginCypressSelectors = require('./lib');
 const pluginVue = require('eslint-plugin-vue');
 const pluginVueA11y = require('eslint-plugin-vuejs-accessibility');
 const stylisticJs = require('@stylistic/eslint-plugin-js');
 const stylisticTs = require('@stylistic/eslint-plugin-ts');
 const tsEslint = require('typescript-eslint');
+const vueEslintParser = require('vue-eslint-parser')
 
 module.exports = [
   eslintJs.configs.recommended,
@@ -20,6 +22,7 @@ module.exports = [
     files: ["**/*.js", "**/*.ts", "**/*.vue"],
     languageOptions: {
       globals: globals.browser,
+      parser: vueEslintParser,
       parserOptions: {
         parser: tsEslint.parser
       }
@@ -29,9 +32,11 @@ module.exports = [
       '@stylistic/ts': stylisticTs,
       'typescript': tsEslint.plugin,
       'vue': pluginVue,
-      'vuejs-accessibility': pluginVueA11y
+      'vuejs-accessibility': pluginVueA11y,
+      'cypress-selectors': pluginCypressSelectors
     },
     rules: {
+      'cypress-selectors/data-cy': 'error',
       'generator-star-spacing': 'off',
       'multiline-comment-style': 'error',
       'sort-imports': ['error', { 'ignoreCase': true }],

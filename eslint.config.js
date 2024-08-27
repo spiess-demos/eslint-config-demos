@@ -1,5 +1,6 @@
 import globals from 'globals'
 import eslintJs from '@eslint/js'
+import pluginCypressSelectors from './lib'
 import pluginVue from 'eslint-plugin-vue'
 import pluginVueA11y from 'eslint-plugin-vuejs-accessibility'
 import stylisticJs from '@stylistic/eslint-plugin-js'
@@ -23,11 +24,7 @@ export default [
       globals: globals.browser,
       parser: vueEslintParser,
       parserOptions: {
-        ecmaFeatures: { modules: true },
-        ecmaVersion: 'latest',
-        extraFileExtensions: ['.vue'],
-        parser: tsEslint.parser,
-        project: './tsconfig.json',
+        parser: tsEslint.parser
       }
     },
     plugins: {
@@ -35,9 +32,11 @@ export default [
       '@stylistic/ts': stylisticTs,
       'typescript': tsEslint.plugin,
       'vue': pluginVue,
-      'vuejs-accessibility': pluginVueA11y
+      'vuejs-accessibility': pluginVueA11y,
+      'cypress-selectors': pluginCypressSelectors
     },
     rules: {
+      'cypress-selectors/data-cy': 'error',
       'generator-star-spacing': 'off',
       'multiline-comment-style': 'error',
       'sort-imports': ['error', { 'ignoreCase': true }],
