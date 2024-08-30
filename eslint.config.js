@@ -1,6 +1,6 @@
 import globals from 'globals'
 import eslintJs from '@eslint/js'
-import pluginCypressSelectors from './lib'
+import pluginCypressSelectors from './lib/data-cy'
 import pluginVue from 'eslint-plugin-vue'
 import pluginVueA11y from 'eslint-plugin-vuejs-accessibility'
 import stylisticJs from '@stylistic/eslint-plugin-js'
