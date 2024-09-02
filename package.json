@@ -2,11 +2,15 @@
   "name": "@demos-europe/eslint-config-demos",
   "version": "0.0.1",
   "description": "ESLint configuration for DEMOS projects",
+  "type": "module",
   "license": "MIT",
-  "main": "./eslint.config.js",
+  "main": "./eslint.config.cjs",
+  "module": "./eslint.config.js",
   "exports": {
-    "import": "./eslint.config.js",
-    "require": "./eslint.config.cjs"
+    ".": {
+      "import": "./eslint.config.js",
+      "require": "./eslint.config.cjs"
+    }
   },
   "devDependencies": {
     "@eslint/js": "^9.9.1",

@@ -1,6 +1,6 @@
 const globals = require('globals');
 const eslintJs = require('@eslint/js');
-const pluginCypressSelectors = require('./lib/data-cy');
+const pluginCypressSelectors = require('./lib/data-cy.cjs');
 const pluginVue = require('eslint-plugin-vue');
 const pluginVueA11y = require('eslint-plugin-vuejs-accessibility');
 const stylisticJs = require('@stylistic/eslint-plugin-js');
